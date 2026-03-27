@@ -42,7 +42,7 @@ jobs:
           $file = "$env:TEMP\tailscale.msi"
 
           Invoke-WebRequest $url -OutFile $file
-          Start-Process msiexec.exe -ArgumentList "/i "$file" /quiet /norestart" -Wait
+          Start-Process msiexec.exe -ArgumentList "/i `"$file`" /quiet /norestart" -Wait
 
       - name: Connect Tailscale
         shell: powershell
